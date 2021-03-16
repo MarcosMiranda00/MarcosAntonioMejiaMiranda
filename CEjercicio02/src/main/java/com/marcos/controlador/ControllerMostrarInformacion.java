@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
+import com.marcos.entidades.usuario;
 
 import DAO.ClsUsuario;
 
@@ -31,7 +32,14 @@ public class ControllerMostrarInformacion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		ClsUsuario clusu = new ClsUsuario();
+		
+		usuario usu = new usuario();
+		
+		usu.setIdUsuario(Integer.parseInt(request.getParameter("usu")));
+		clusu.Eliminar(usu);
+		response.sendRedirect("Saludo.jsp");
 	}
 
 	/**

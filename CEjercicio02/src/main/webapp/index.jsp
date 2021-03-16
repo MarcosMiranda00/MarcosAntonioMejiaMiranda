@@ -20,5 +20,8 @@
 		<input type="submit">
 	</form>
 
+<%String saludo ="Hola Mundo desde JAVA"; %>
+<h1 value=<%= saludo %>> </h1>
+
 </body>
 </html>
