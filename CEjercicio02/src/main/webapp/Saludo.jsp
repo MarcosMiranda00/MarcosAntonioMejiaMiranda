@@ -30,7 +30,10 @@
 					<td>${item.idUsuario}</td>
 					<td>${item.Usuario}</td>
 					<td>${item.Pass}</td>
-					<td> <a href="ControllerMostrarInformacion?usu=${item.idUsuario}" class="btn btn-danger">ELIMINAR  <a> </td>
+					<td> <a href="ControllerMostrarInformacion?IdUsuario=${item.idUsuario}&Eliminar=btne" class="btn btn-danger">ELIMINAR  <a> 
+					<a  href="add.jsp?Id=${item.idUsuario}&Usuario=${item.Usuario}&Pass=${item.Pass}" class="btn btn-warning">ACTUALIZAR</a>
+					</td>
+					
 					</tr>
 					
 					`
@@ -42,6 +45,7 @@
 			});
 		});
 </script>
+		<a href="add.jsp" class="btn btn-primary">Agregar</a>
 		
 		<table class="table table-dark table-hover" id="TablaDatos"> 
 		<thead>
@@ -49,6 +53,7 @@
 		<th>Usuario </th>
 		<th>Password </th>
 		<th>Acciones </th>
+		
 		</thead>
 		<tbody>
 		
